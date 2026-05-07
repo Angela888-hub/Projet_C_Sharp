@@ -31,7 +31,6 @@ C:\Users\HP OMEN\source\repos\gestiondedouanedevoiture\gestiondedouanedevoiture\
 C:\Users\HP OMEN\source\repos\gestiondedouanedevoiture\gestiondedouanedevoiture\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\HP OMEN\source\repos\gestiondedouanedevoiture\gestiondedouanedevoiture\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\HP OMEN\source\repos\gestiondedouanedevoiture\gestiondedouanedevoiture\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\HP OMEN\source\repos\gestiondedouanedevoiture\gestiondedouanedevoiture\obj\Debug\gestiondedouanedevoiture.Form1.resources
 C:\Users\HP OMEN\source\repos\gestiondedouanedevoiture\gestiondedouanedevoiture\obj\Debug\gestiondedouanedevoiture.frmaccueil.resources
 C:\Users\HP OMEN\source\repos\gestiondedouanedevoiture\gestiondedouanedevoiture\obj\Debug\gestiondedouanedevoiture.frmproprietaire.resources
 C:\Users\HP OMEN\source\repos\gestiondedouanedevoiture\gestiondedouanedevoiture\obj\Debug\gestiondedouanedevoiture.frmquittance.resources

@@ -34,7 +34,7 @@ namespace gestiondedouanedevoiture
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlstatistique = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnlclients = new System.Windows.Forms.Panel();
             this.lblclients = new System.Windows.Forms.Label();
@@ -69,11 +69,11 @@ namespace gestiondedouanedevoiture
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.pnl1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnproprietaire = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.btnvoiture = new System.Windows.Forms.Button();
             this.btnpaiement = new System.Windows.Forms.Button();
             this.btnquittance = new System.Windows.Forms.Button();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.panel1.SuspendLayout();
+            this.pnlstatistique.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlclients.SuspendLayout();
             this.panel20.SuspendLayout();
@@ -117,17 +117,17 @@ namespace gestiondedouanedevoiture
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1243, 276);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // panel1
+            // pnlstatistique
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pnlstatistique.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panel1.Controls.Add(this.flowLayoutPanel1);
-            this.panel1.Location = new System.Drawing.Point(529, 513);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(672, 75);
-            this.panel1.TabIndex = 0;
+            this.pnlstatistique.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pnlstatistique.Controls.Add(this.flowLayoutPanel1);
+            this.pnlstatistique.Location = new System.Drawing.Point(521, 513);
+            this.pnlstatistique.Name = "pnlstatistique";
+            this.pnlstatistique.Size = new System.Drawing.Size(664, 132);
+            this.pnlstatistique.TabIndex = 0;
             // 
             // panel3
             // 
@@ -427,12 +427,11 @@ namespace gestiondedouanedevoiture
             this.flowLayoutPanel2.Controls.Add(this.pnlrecettes);
             this.flowLayoutPanel2.Controls.Add(this.pnldeclarations);
             this.flowLayoutPanel2.Controls.Add(this.pnlclients);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(559, 83);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(515, 120);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(100, 0, 0, 0);
             this.flowLayoutPanel2.Size = new System.Drawing.Size(1374, 341);
             this.flowLayoutPanel2.TabIndex = 3;
-            this.flowLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel2_Paint);
             // 
             // pnl1
             // 
@@ -469,6 +468,17 @@ namespace gestiondedouanedevoiture
             this.btnproprietaire.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnproprietaire.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnproprietaire.UseVisualStyleBackColor = true;
+            this.btnproprietaire.Click += new System.EventHandler(this.btnproprietaire_Click);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "auto.png");
+            this.imageList1.Images.SetKeyName(1, "boutique-automobile.png");
+            this.imageList1.Images.SetKeyName(2, "declaration-dimpot.png");
+            this.imageList1.Images.SetKeyName(3, "paiement.png");
+            this.imageList1.Images.SetKeyName(4, "facture.png");
             // 
             // btnvoiture
             // 
@@ -489,6 +499,7 @@ namespace gestiondedouanedevoiture
             this.btnvoiture.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnvoiture.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnvoiture.UseVisualStyleBackColor = true;
+            this.btnvoiture.Click += new System.EventHandler(this.btnvoiture_Click);
             // 
             // btnpaiement
             // 
@@ -509,6 +520,7 @@ namespace gestiondedouanedevoiture
             this.btnpaiement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnpaiement.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnpaiement.UseVisualStyleBackColor = true;
+            this.btnpaiement.Click += new System.EventHandler(this.btnpaiement_Click);
             // 
             // btnquittance
             // 
@@ -529,16 +541,7 @@ namespace gestiondedouanedevoiture
             this.btnquittance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnquittance.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnquittance.UseVisualStyleBackColor = true;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "auto.png");
-            this.imageList1.Images.SetKeyName(1, "boutique-automobile.png");
-            this.imageList1.Images.SetKeyName(2, "declaration-dimpot.png");
-            this.imageList1.Images.SetKeyName(3, "paiement.png");
-            this.imageList1.Images.SetKeyName(4, "facture.png");
+            this.btnquittance.Click += new System.EventHandler(this.btngenerer_Click);
             // 
             // frmaccueil
             // 
@@ -549,13 +552,13 @@ namespace gestiondedouanedevoiture
             this.Controls.Add(this.pnl1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.flowLayoutPanel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlstatistique);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinimumSize = new System.Drawing.Size(900, 600);
             this.Name = "frmaccueil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmacceuil";
-            this.panel1.ResumeLayout(false);
+            this.pnlstatistique.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.pnlclients.ResumeLayout(false);
@@ -582,7 +585,7 @@ namespace gestiondedouanedevoiture
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlstatistique;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel pnlclients;
         private System.Windows.Forms.Label lblclients;

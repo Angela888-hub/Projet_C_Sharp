@@ -53,7 +53,6 @@ namespace gestiondedouanedevoiture
             this.txtmarque = new System.Windows.Forms.TextBox();
             this.txtvin = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnsuivant = new System.Windows.Forms.Button();
             this.dgvDeclarations = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.txtnumero = new System.Windows.Forms.TextBox();
@@ -94,7 +93,7 @@ namespace gestiondedouanedevoiture
             this.panel1.Location = new System.Drawing.Point(0, 46);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1257, 612);
+            this.panel1.Size = new System.Drawing.Size(1697, 591);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -112,9 +111,9 @@ namespace gestiondedouanedevoiture
             this.panel2.Controls.Add(this.lblvin);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Location = new System.Drawing.Point(448, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1256, 243);
+            this.panel2.Size = new System.Drawing.Size(1696, 222);
             this.panel2.TabIndex = 16;
             // 
             // label4
@@ -262,7 +261,7 @@ namespace gestiondedouanedevoiture
             this.panel3.Location = new System.Drawing.Point(613, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(434, 223);
+            this.panel3.Size = new System.Drawing.Size(874, 202);
             this.panel3.TabIndex = 25;
             // 
             // comboModeproprietaire
@@ -343,39 +342,19 @@ namespace gestiondedouanedevoiture
             this.label1.TabIndex = 24;
             this.label1.Text = "PROPRIETES DE LA VOITURE\r\n\r\n";
             // 
-            // btnsuivant
-            // 
-            this.btnsuivant.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnsuivant.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnsuivant.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnsuivant.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsuivant.ForeColor = System.Drawing.Color.Black;
-            this.btnsuivant.ImageIndex = 0;
-            this.btnsuivant.Location = new System.Drawing.Point(1010, 42);
-            this.btnsuivant.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnsuivant.Name = "btnsuivant";
-            this.btnsuivant.Size = new System.Drawing.Size(154, 43);
-            this.btnsuivant.TabIndex = 15;
-            this.btnsuivant.Text = "Suivant";
-            this.btnsuivant.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnsuivant.UseVisualStyleBackColor = false;
-            this.btnsuivant.Click += new System.EventHandler(this.btnsuivant_Click_1);
-            // 
             // dgvDeclarations
             // 
             this.dgvDeclarations.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDeclarations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDeclarations.Location = new System.Drawing.Point(0, 452);
+            this.dgvDeclarations.Location = new System.Drawing.Point(0, 513);
             this.dgvDeclarations.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDeclarations.Name = "dgvDeclarations";
             this.dgvDeclarations.ReadOnly = true;
             this.dgvDeclarations.RowHeadersWidth = 51;
             this.dgvDeclarations.RowTemplate.Height = 24;
-            this.dgvDeclarations.Size = new System.Drawing.Size(1257, 206);
+            this.dgvDeclarations.Size = new System.Drawing.Size(1697, 124);
             this.dgvDeclarations.TabIndex = 3;
             // 
             // label2
@@ -403,14 +382,13 @@ namespace gestiondedouanedevoiture
             // grpdeclaration
             // 
             this.grpdeclaration.Controls.Add(this.btnenregistrer);
-            this.grpdeclaration.Controls.Add(this.btnsuivant);
             this.grpdeclaration.Controls.Add(this.txtdatedecl);
             this.grpdeclaration.Controls.Add(this.txtnumero);
             this.grpdeclaration.Controls.Add(this.lblrep);
             this.grpdeclaration.Controls.Add(this.label2);
             this.grpdeclaration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpdeclaration.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.grpdeclaration.Location = new System.Drawing.Point(0, 295);
+            this.grpdeclaration.Location = new System.Drawing.Point(445, 295);
             this.grpdeclaration.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpdeclaration.Name = "grpdeclaration";
             this.grpdeclaration.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -477,6 +455,7 @@ namespace gestiondedouanedevoiture
             this.btnretour.Size = new System.Drawing.Size(52, 38);
             this.btnretour.TabIndex = 5;
             this.btnretour.UseVisualStyleBackColor = true;
+            this.btnretour.Click += new System.EventHandler(this.btnretour_Click);
             // 
             // frmdeclarationvoiture
             // 
@@ -513,7 +492,6 @@ namespace gestiondedouanedevoiture
 
         private System.Windows.Forms.Label lbl1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnsuivant;
         private System.Windows.Forms.DataGridView dgvDeclarations;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtnumero;

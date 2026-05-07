@@ -29,9 +29,13 @@ namespace gestiondedouanedevoiture
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmversement));
             this.label1 = new System.Windows.Forms.Label();
             this.lbl1 = new System.Windows.Forms.Label();
             this.dgvVersements = new System.Windows.Forms.DataGridView();
+            this.btnretour = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVersements)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,11 +69,29 @@ namespace gestiondedouanedevoiture
             this.dgvVersements.Size = new System.Drawing.Size(1195, 398);
             this.dgvVersements.TabIndex = 3;
             // 
+            // btnretour
+            // 
+            this.btnretour.ImageIndex = 0;
+            this.btnretour.ImageList = this.imageList1;
+            this.btnretour.Location = new System.Drawing.Point(42, 31);
+            this.btnretour.Name = "btnretour";
+            this.btnretour.Size = new System.Drawing.Size(47, 36);
+            this.btnretour.TabIndex = 4;
+            this.btnretour.UseVisualStyleBackColor = true;
+            this.btnretour.Click += new System.EventHandler(this.btnretour_Click);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "fleche-gauche.png");
+            // 
             // frmversement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1328, 670);
+            this.Controls.Add(this.btnretour);
             this.Controls.Add(this.dgvVersements);
             this.Controls.Add(this.lbl1);
             this.Controls.Add(this.label1);
@@ -87,5 +109,7 @@ namespace gestiondedouanedevoiture
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl1;
         private System.Windows.Forms.DataGridView dgvVersements;
+        private System.Windows.Forms.Button btnretour;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }

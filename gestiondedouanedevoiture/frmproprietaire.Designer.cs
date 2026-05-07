@@ -36,10 +36,11 @@ namespace gestiondedouanedevoiture
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             this.dgvProprietaires = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.imageretour = new System.Windows.Forms.ImageList(this.components);
+            this.btnretour = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnenregistrer = new System.Windows.Forms.Button();
             this.btnajouter = new System.Windows.Forms.Button();
-            this.btnsuivant = new System.Windows.Forms.Button();
             this.txtnif = new System.Windows.Forms.TextBox();
             this.btnmodifier = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,11 +57,7 @@ namespace gestiondedouanedevoiture
             this.txtadresse = new System.Windows.Forms.TextBox();
             this.txtprenoms = new System.Windows.Forms.TextBox();
             this.txttelephone = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.imageretour = new System.Windows.Forms.ImageList(this.components);
-            this.btnretour = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProprietaires)).BeginInit();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -103,32 +100,40 @@ namespace gestiondedouanedevoiture
             // 
             this.dgvProprietaires.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProprietaires.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProprietaires.Location = new System.Drawing.Point(491, 289);
+            this.dgvProprietaires.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvProprietaires.Location = new System.Drawing.Point(0, 57);
             this.dgvProprietaires.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvProprietaires.Name = "dgvProprietaires";
             this.dgvProprietaires.ReadOnly = true;
             this.dgvProprietaires.RowHeadersWidth = 51;
             this.dgvProprietaires.RowTemplate.Height = 24;
-            this.dgvProprietaires.Size = new System.Drawing.Size(802, 174);
+            this.dgvProprietaires.Size = new System.Drawing.Size(1384, 611);
             this.dgvProprietaires.TabIndex = 16;
             this.dgvProprietaires.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProprietaires_CellContentClick);
             // 
-            // panel1
+            // imageretour
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(0, 57);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1384, 281);
-            this.panel1.TabIndex = 24;
+            this.imageretour.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageretour.ImageStream")));
+            this.imageretour.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageretour.Images.SetKeyName(0, "fleche-gauche.png");
+            this.imageretour.Images.SetKeyName(1, "fleche-gauche.png");
+            // 
+            // btnretour
+            // 
+            this.btnretour.ImageIndex = 1;
+            this.btnretour.ImageList = this.imageretour;
+            this.btnretour.Location = new System.Drawing.Point(50, 11);
+            this.btnretour.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnretour.Name = "btnretour";
+            this.btnretour.Size = new System.Drawing.Size(52, 38);
+            this.btnretour.TabIndex = 22;
+            this.btnretour.UseVisualStyleBackColor = true;
+            this.btnretour.Click += new System.EventHandler(this.btnretour_Click);
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnenregistrer);
             this.panel2.Controls.Add(this.btnajouter);
-            this.panel2.Controls.Add(this.btnsuivant);
             this.panel2.Controls.Add(this.txtnif);
             this.panel2.Controls.Add(this.btnmodifier);
             this.panel2.Controls.Add(this.label1);
@@ -145,10 +150,25 @@ namespace gestiondedouanedevoiture
             this.panel2.Controls.Add(this.txtadresse);
             this.panel2.Controls.Add(this.txtprenoms);
             this.panel2.Controls.Add(this.txttelephone);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 57);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1384, 281);
-            this.panel2.TabIndex = 2;
+            this.panel2.Size = new System.Drawing.Size(1384, 346);
+            this.panel2.TabIndex = 23;
+            // 
+            // btnenregistrer
+            // 
+            this.btnenregistrer.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnenregistrer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnenregistrer.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnenregistrer.Location = new System.Drawing.Point(1245, 234);
+            this.btnenregistrer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnenregistrer.Name = "btnenregistrer";
+            this.btnenregistrer.Size = new System.Drawing.Size(115, 29);
+            this.btnenregistrer.TabIndex = 42;
+            this.btnenregistrer.Text = "Enregistrer";
+            this.btnenregistrer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnenregistrer.UseVisualStyleBackColor = false;
             // 
             // btnajouter
             // 
@@ -160,20 +180,6 @@ namespace gestiondedouanedevoiture
             this.btnajouter.TabIndex = 37;
             this.btnajouter.Text = "Ajouter";
             this.btnajouter.UseVisualStyleBackColor = false;
-            // 
-            // btnsuivant
-            // 
-            this.btnsuivant.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnsuivant.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnsuivant.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsuivant.Location = new System.Drawing.Point(1267, 196);
-            this.btnsuivant.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnsuivant.Name = "btnsuivant";
-            this.btnsuivant.Size = new System.Drawing.Size(103, 30);
-            this.btnsuivant.TabIndex = 41;
-            this.btnsuivant.Text = "Suivant";
-            this.btnsuivant.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnsuivant.UseVisualStyleBackColor = false;
             // 
             // txtnif
             // 
@@ -334,38 +340,12 @@ namespace gestiondedouanedevoiture
             this.txttelephone.Size = new System.Drawing.Size(516, 32);
             this.txttelephone.TabIndex = 34;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(530, -9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 17);
-            this.label2.TabIndex = 1;
-            // 
-            // imageretour
-            // 
-            this.imageretour.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageretour.ImageStream")));
-            this.imageretour.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageretour.Images.SetKeyName(0, "fleche-gauche.png");
-            this.imageretour.Images.SetKeyName(1, "fleche-gauche.png");
-            // 
-            // btnretour
-            // 
-            this.btnretour.ImageIndex = 1;
-            this.btnretour.ImageList = this.imageretour;
-            this.btnretour.Location = new System.Drawing.Point(19, 7);
-            this.btnretour.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnretour.Name = "btnretour";
-            this.btnretour.Size = new System.Drawing.Size(52, 38);
-            this.btnretour.TabIndex = 22;
-            this.btnretour.UseVisualStyleBackColor = true;
-            // 
             // frmproprietaire
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1384, 668);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnretour);
             this.Controls.Add(this.dgvProprietaires);
             this.Controls.Add(this.lblrecherche);
@@ -375,8 +355,6 @@ namespace gestiondedouanedevoiture
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "frmproprietaire";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProprietaires)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -391,13 +369,11 @@ namespace gestiondedouanedevoiture
         private System.Windows.Forms.ImageList imageList1;
         private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
         private System.Windows.Forms.DataGridView dgvProprietaires;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ImageList imageretour;
         private System.Windows.Forms.Button btnretour;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnenregistrer;
         private System.Windows.Forms.Button btnajouter;
-        private System.Windows.Forms.Button btnsuivant;
         private System.Windows.Forms.TextBox txtnif;
         private System.Windows.Forms.Button btnmodifier;
         private System.Windows.Forms.Label label1;

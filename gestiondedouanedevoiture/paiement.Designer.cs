@@ -63,10 +63,9 @@ namespace gestiondedouanedevoiture
             // lblgestion
             // 
             this.lblgestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblgestion.Location = new System.Drawing.Point(240, 37);
-            this.lblgestion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblgestion.Location = new System.Drawing.Point(547, 9);
             this.lblgestion.Name = "lblgestion";
-            this.lblgestion.Size = new System.Drawing.Size(610, 37);
+            this.lblgestion.Size = new System.Drawing.Size(813, 46);
             this.lblgestion.TabIndex = 0;
             this.lblgestion.Text = "GESTION DE DOUANE DE VOITURE";
             // 
@@ -81,10 +80,10 @@ namespace gestiondedouanedevoiture
             "Espèces",
             "Chèque bancaire",
             "Mvola"});
-            this.comboModePaiement.Location = new System.Drawing.Point(258, 215);
-            this.comboModePaiement.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboModePaiement.Location = new System.Drawing.Point(344, 265);
+            this.comboModePaiement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboModePaiement.Name = "comboModePaiement";
-            this.comboModePaiement.Size = new System.Drawing.Size(92, 44);
+            this.comboModePaiement.Size = new System.Drawing.Size(121, 50);
             this.comboModePaiement.TabIndex = 8;
             // 
             // label3
@@ -92,10 +91,9 @@ namespace gestiondedouanedevoiture
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(74, 226);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(99, 278);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 20);
+            this.label3.Size = new System.Drawing.Size(158, 25);
             this.label3.TabIndex = 7;
             this.label3.Text = "PAIEMENT VIA:";
             // 
@@ -104,20 +102,19 @@ namespace gestiondedouanedevoiture
             this.lblIdDeclaration.AutoSize = true;
             this.lblIdDeclaration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdDeclaration.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblIdDeclaration.Location = new System.Drawing.Point(74, 72);
-            this.lblIdDeclaration.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblIdDeclaration.Location = new System.Drawing.Point(99, 89);
             this.lblIdDeclaration.Name = "lblIdDeclaration";
-            this.lblIdDeclaration.Size = new System.Drawing.Size(114, 20);
+            this.lblIdDeclaration.Size = new System.Drawing.Size(140, 25);
             this.lblIdDeclaration.TabIndex = 9;
             this.lblIdDeclaration.Text = "Id_declaration:";
             // 
             // txtIdDecl
             // 
-            this.txtIdDecl.Location = new System.Drawing.Point(236, 59);
-            this.txtIdDecl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIdDecl.Location = new System.Drawing.Point(315, 73);
+            this.txtIdDecl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIdDecl.Multiline = true;
             this.txtIdDecl.Name = "txtIdDecl";
-            this.txtIdDecl.Size = new System.Drawing.Size(137, 32);
+            this.txtIdDecl.Size = new System.Drawing.Size(181, 38);
             this.txtIdDecl.TabIndex = 10;
             // 
             // lbldate
@@ -125,21 +122,20 @@ namespace gestiondedouanedevoiture
             this.lbldate.AutoSize = true;
             this.lbldate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbldate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbldate.Location = new System.Drawing.Point(74, 124);
-            this.lbldate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbldate.Location = new System.Drawing.Point(99, 153);
             this.lbldate.Name = "lbldate";
-            this.lbldate.Size = new System.Drawing.Size(48, 20);
+            this.lbldate.Size = new System.Drawing.Size(59, 25);
             this.lbldate.TabIndex = 11;
             this.lbldate.Text = "Date:";
             // 
             // Datetime
             // 
-            this.Datetime.Location = new System.Drawing.Point(236, 111);
-            this.Datetime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Datetime.Location = new System.Drawing.Point(315, 137);
+            this.Datetime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Datetime.Multiline = true;
             this.Datetime.Name = "Datetime";
             this.Datetime.ReadOnly = true;
-            this.Datetime.Size = new System.Drawing.Size(137, 32);
+            this.Datetime.Size = new System.Drawing.Size(181, 38);
             this.Datetime.TabIndex = 12;
             // 
             // lblTotal
@@ -147,21 +143,20 @@ namespace gestiondedouanedevoiture
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblTotal.Location = new System.Drawing.Point(74, 175);
-            this.lblTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTotal.Location = new System.Drawing.Point(99, 215);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(63, 20);
+            this.lblTotal.Size = new System.Drawing.Size(85, 25);
             this.lblTotal.TabIndex = 13;
             this.lblTotal.Text = "TOTAL:";
             // 
             // txtTotal
             // 
-            this.txtTotal.Location = new System.Drawing.Point(236, 163);
-            this.txtTotal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTotal.Location = new System.Drawing.Point(315, 201);
+            this.txtTotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTotal.Multiline = true;
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
-            this.txtTotal.Size = new System.Drawing.Size(137, 32);
+            this.txtTotal.Size = new System.Drawing.Size(181, 38);
             this.txtTotal.TabIndex = 14;
             // 
             // lblid_declaration
@@ -169,20 +164,19 @@ namespace gestiondedouanedevoiture
             this.lblid_declaration.AutoSize = true;
             this.lblid_declaration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblid_declaration.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblid_declaration.Location = new System.Drawing.Point(4, 47);
-            this.lblid_declaration.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblid_declaration.Location = new System.Drawing.Point(5, 58);
             this.lblid_declaration.Name = "lblid_declaration";
-            this.lblid_declaration.Size = new System.Drawing.Size(114, 20);
+            this.lblid_declaration.Size = new System.Drawing.Size(140, 25);
             this.lblid_declaration.TabIndex = 0;
             this.lblid_declaration.Text = "Id_declaration:";
             // 
             // txtIdDeclaration
             // 
-            this.txtIdDeclaration.Location = new System.Drawing.Point(142, 46);
-            this.txtIdDeclaration.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIdDeclaration.Location = new System.Drawing.Point(189, 57);
+            this.txtIdDeclaration.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIdDeclaration.Multiline = true;
             this.txtIdDeclaration.Name = "txtIdDeclaration";
-            this.txtIdDeclaration.Size = new System.Drawing.Size(137, 32);
+            this.txtIdDeclaration.Size = new System.Drawing.Size(181, 38);
             this.txtIdDeclaration.TabIndex = 1;
             // 
             // lblmontant
@@ -190,21 +184,20 @@ namespace gestiondedouanedevoiture
             this.lblmontant.AutoSize = true;
             this.lblmontant.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblmontant.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblmontant.Location = new System.Drawing.Point(9, 109);
-            this.lblmontant.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblmontant.Location = new System.Drawing.Point(12, 134);
             this.lblmontant.Name = "lblmontant";
-            this.lblmontant.Size = new System.Drawing.Size(72, 20);
+            this.lblmontant.Size = new System.Drawing.Size(89, 25);
             this.lblmontant.TabIndex = 2;
             this.lblmontant.Text = "Montant:\r\n";
             // 
             // txtMontant
             // 
-            this.txtMontant.Location = new System.Drawing.Point(142, 110);
-            this.txtMontant.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMontant.Location = new System.Drawing.Point(189, 135);
+            this.txtMontant.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMontant.Multiline = true;
             this.txtMontant.Name = "txtMontant";
             this.txtMontant.ReadOnly = true;
-            this.txtMontant.Size = new System.Drawing.Size(137, 32);
+            this.txtMontant.Size = new System.Drawing.Size(181, 38);
             this.txtMontant.TabIndex = 3;
             // 
             // lbltva
@@ -212,22 +205,21 @@ namespace gestiondedouanedevoiture
             this.lbltva.AutoSize = true;
             this.lbltva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltva.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbltva.Location = new System.Drawing.Point(14, 171);
-            this.lbltva.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbltva.Location = new System.Drawing.Point(19, 210);
             this.lbltva.Name = "lbltva";
-            this.lbltva.Size = new System.Drawing.Size(44, 20);
+            this.lbltva.Size = new System.Drawing.Size(59, 25);
             this.lbltva.TabIndex = 5;
             this.lbltva.Text = "TVA:";
             this.lbltva.Click += new System.EventHandler(this.lbltva_Click);
             // 
             // txtTVA
             // 
-            this.txtTVA.Location = new System.Drawing.Point(142, 176);
-            this.txtTVA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTVA.Location = new System.Drawing.Point(189, 217);
+            this.txtTVA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTVA.Multiline = true;
             this.txtTVA.Name = "txtTVA";
             this.txtTVA.ReadOnly = true;
-            this.txtTVA.Size = new System.Drawing.Size(137, 32);
+            this.txtTVA.Size = new System.Drawing.Size(181, 38);
             this.txtTVA.TabIndex = 6;
             // 
             // lblstatut
@@ -235,21 +227,20 @@ namespace gestiondedouanedevoiture
             this.lblstatut.AutoSize = true;
             this.lblstatut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblstatut.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblstatut.Location = new System.Drawing.Point(74, 277);
-            this.lblstatut.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblstatut.Location = new System.Drawing.Point(99, 341);
             this.lblstatut.Name = "lblstatut";
-            this.lblstatut.Size = new System.Drawing.Size(57, 20);
+            this.lblstatut.Size = new System.Drawing.Size(69, 25);
             this.lblstatut.TabIndex = 7;
             this.lblstatut.Text = "Statut:";
             // 
             // txtstatut
             // 
-            this.txtstatut.Location = new System.Drawing.Point(236, 277);
-            this.txtstatut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtstatut.Location = new System.Drawing.Point(315, 341);
+            this.txtstatut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtstatut.Multiline = true;
             this.txtstatut.Name = "txtstatut";
             this.txtstatut.ReadOnly = true;
-            this.txtstatut.Size = new System.Drawing.Size(137, 32);
+            this.txtstatut.Size = new System.Drawing.Size(181, 38);
             this.txtstatut.TabIndex = 8;
             // 
             // TAXES
@@ -264,11 +255,11 @@ namespace gestiondedouanedevoiture
             this.TAXES.Controls.Add(this.txtIdDeclaration);
             this.TAXES.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TAXES.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.TAXES.Location = new System.Drawing.Point(0, 113);
-            this.TAXES.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TAXES.Location = new System.Drawing.Point(238, 263);
+            this.TAXES.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TAXES.Name = "TAXES";
-            this.TAXES.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.TAXES.Size = new System.Drawing.Size(490, 375);
+            this.TAXES.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TAXES.Size = new System.Drawing.Size(653, 461);
             this.TAXES.TabIndex = 5;
             this.TAXES.TabStop = false;
             this.TAXES.Text = "TAXES";
@@ -279,10 +270,10 @@ namespace gestiondedouanedevoiture
             this.button1.BackColor = System.Drawing.Color.RoyalBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(9, 240);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(12, 295);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 29);
+            this.button1.Size = new System.Drawing.Size(144, 36);
             this.button1.TabIndex = 10;
             this.button1.Text = "Calculer";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -290,11 +281,11 @@ namespace gestiondedouanedevoiture
             // 
             // txtcalcultotal
             // 
-            this.txtcalcultotal.Location = new System.Drawing.Point(142, 240);
-            this.txtcalcultotal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtcalcultotal.Location = new System.Drawing.Point(189, 295);
+            this.txtcalcultotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtcalcultotal.Multiline = true;
             this.txtcalcultotal.Name = "txtcalcultotal";
-            this.txtcalcultotal.Size = new System.Drawing.Size(137, 32);
+            this.txtcalcultotal.Size = new System.Drawing.Size(181, 38);
             this.txtcalcultotal.TabIndex = 8;
             // 
             // groupBox1
@@ -312,11 +303,11 @@ namespace gestiondedouanedevoiture
             this.groupBox1.Controls.Add(this.txtIdDecl);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.groupBox1.Location = new System.Drawing.Point(507, 115);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Location = new System.Drawing.Point(975, 263);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(496, 372);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(661, 458);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "PAIEMENT";
@@ -326,10 +317,10 @@ namespace gestiondedouanedevoiture
             this.btnenregistrer.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnenregistrer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnenregistrer.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnenregistrer.Location = new System.Drawing.Point(361, 324);
-            this.btnenregistrer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnenregistrer.Location = new System.Drawing.Point(481, 399);
+            this.btnenregistrer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnenregistrer.Name = "btnenregistrer";
-            this.btnenregistrer.Size = new System.Drawing.Size(108, 29);
+            this.btnenregistrer.Size = new System.Drawing.Size(144, 36);
             this.btnenregistrer.TabIndex = 9;
             this.btnenregistrer.Text = "Enregistrer";
             this.btnenregistrer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -340,12 +331,13 @@ namespace gestiondedouanedevoiture
             // 
             this.btnretour.ImageIndex = 0;
             this.btnretour.ImageList = this.imageList2;
-            this.btnretour.Location = new System.Drawing.Point(18, 10);
-            this.btnretour.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnretour.Location = new System.Drawing.Point(114, 9);
+            this.btnretour.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnretour.Name = "btnretour";
-            this.btnretour.Size = new System.Drawing.Size(39, 31);
+            this.btnretour.Size = new System.Drawing.Size(52, 38);
             this.btnretour.TabIndex = 39;
             this.btnretour.UseVisualStyleBackColor = true;
+            this.btnretour.Click += new System.EventHandler(this.btnretour_Click);
             // 
             // imageList2
             // 
@@ -358,10 +350,10 @@ namespace gestiondedouanedevoiture
             this.btnsuivant.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnsuivant.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnsuivant.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsuivant.Location = new System.Drawing.Point(868, 492);
-            this.btnsuivant.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnsuivant.Location = new System.Drawing.Point(1157, 606);
+            this.btnsuivant.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnsuivant.Name = "btnsuivant";
-            this.btnsuivant.Size = new System.Drawing.Size(108, 29);
+            this.btnsuivant.Size = new System.Drawing.Size(144, 36);
             this.btnsuivant.TabIndex = 15;
             this.btnsuivant.Text = "Suivant";
             this.btnsuivant.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -369,15 +361,15 @@ namespace gestiondedouanedevoiture
             // 
             // paiement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1053, 574);
+            this.ClientSize = new System.Drawing.Size(1404, 706);
             this.Controls.Add(this.btnsuivant);
             this.Controls.Add(this.btnretour);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.TAXES);
             this.Controls.Add(this.lblgestion);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "paiement";
             this.Text = "paiement";
             this.TAXES.ResumeLayout(false);

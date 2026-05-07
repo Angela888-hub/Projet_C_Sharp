@@ -96,5 +96,17 @@ namespace gestiondedouanedevoiture
         {
 
         }
+
+        private void btnretour_Click(object sender, EventArgs e)
+        {
+                // On cherche le formulaire parent (frmaccueil) et on appelle sa méthode de retour
+                if (this.ParentForm is frmaccueil accueil)
+                {
+                    accueil.RetourAccueil();
+                }
+
+                // On ferme le formulaire actuel pour libérer la mémoire
+                this.Close();
+        }
     }
 }

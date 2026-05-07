@@ -78,7 +78,7 @@ namespace gestiondedouanedevoiture
             // lblgestion
             // 
             this.lblgestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblgestion.Location = new System.Drawing.Point(282, -4);
+            this.lblgestion.Location = new System.Drawing.Point(458, 7);
             this.lblgestion.Name = "lblgestion";
             this.lblgestion.Size = new System.Drawing.Size(813, 45);
             this.lblgestion.TabIndex = 1;
@@ -87,7 +87,7 @@ namespace gestiondedouanedevoiture
             // txtIdDeclaration
             // 
             this.txtIdDeclaration.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtIdDeclaration.Location = new System.Drawing.Point(121, 68);
+            this.txtIdDeclaration.Location = new System.Drawing.Point(120, 98);
             this.txtIdDeclaration.Multiline = true;
             this.txtIdDeclaration.Name = "txtIdDeclaration";
             this.txtIdDeclaration.Size = new System.Drawing.Size(201, 31);
@@ -97,7 +97,7 @@ namespace gestiondedouanedevoiture
             // lblIdDeclaration
             // 
             this.lblIdDeclaration.AutoSize = true;
-            this.lblIdDeclaration.Location = new System.Drawing.Point(12, 71);
+            this.lblIdDeclaration.Location = new System.Drawing.Point(11, 101);
             this.lblIdDeclaration.Name = "lblIdDeclaration";
             this.lblIdDeclaration.Size = new System.Drawing.Size(103, 17);
             this.lblIdDeclaration.TabIndex = 3;
@@ -159,7 +159,7 @@ namespace gestiondedouanedevoiture
             // 
             this.btngenerer.BackColor = System.Drawing.Color.MidnightBlue;
             this.btngenerer.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.btngenerer.Location = new System.Drawing.Point(156, 105);
+            this.btngenerer.Location = new System.Drawing.Point(156, 136);
             this.btngenerer.Name = "btngenerer";
             this.btngenerer.Size = new System.Drawing.Size(105, 37);
             this.btngenerer.TabIndex = 32;
@@ -174,7 +174,7 @@ namespace gestiondedouanedevoiture
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(338, 55);
+            this.panel2.Location = new System.Drawing.Point(678, 55);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(952, 658);
             this.panel2.TabIndex = 34;
@@ -421,7 +421,7 @@ namespace gestiondedouanedevoiture
             this.btnaccueil.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnaccueil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnaccueil.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.btnaccueil.Location = new System.Drawing.Point(64, 624);
+            this.btnaccueil.Location = new System.Drawing.Point(64, 721);
             this.btnaccueil.Name = "btnaccueil";
             this.btnaccueil.Size = new System.Drawing.Size(248, 56);
             this.btnaccueil.TabIndex = 35;
@@ -433,7 +433,7 @@ namespace gestiondedouanedevoiture
             this.btnimprimer.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnimprimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnimprimer.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.btnimprimer.Location = new System.Drawing.Point(64, 543);
+            this.btnimprimer.Location = new System.Drawing.Point(64, 671);
             this.btnimprimer.Name = "btnimprimer";
             this.btnimprimer.Size = new System.Drawing.Size(248, 56);
             this.btnimprimer.TabIndex = 37;
@@ -444,11 +444,12 @@ namespace gestiondedouanedevoiture
             // 
             this.btnretour.ImageIndex = 0;
             this.btnretour.ImageList = this.imageList1;
-            this.btnretour.Location = new System.Drawing.Point(15, 12);
+            this.btnretour.Location = new System.Drawing.Point(79, 14);
             this.btnretour.Name = "btnretour";
             this.btnretour.Size = new System.Drawing.Size(52, 38);
             this.btnretour.TabIndex = 38;
             this.btnretour.UseVisualStyleBackColor = true;
+            this.btnretour.Click += new System.EventHandler(this.btnretour_Click);
             // 
             // imageList1
             // 
@@ -460,7 +461,7 @@ namespace gestiondedouanedevoiture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1324, 714);
+            this.ClientSize = new System.Drawing.Size(1324, 761);
             this.Controls.Add(this.btnretour);
             this.Controls.Add(this.btnimprimer);
             this.Controls.Add(this.btnaccueil);
