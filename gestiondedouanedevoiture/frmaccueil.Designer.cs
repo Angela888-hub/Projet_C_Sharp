@@ -29,9 +29,10 @@ namespace gestiondedouanedevoiture
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmaccueil));
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnmenu = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -66,6 +67,12 @@ namespace gestiondedouanedevoiture
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnl1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnproprietaire = new System.Windows.Forms.Button();
+            this.btnvoiture = new System.Windows.Forms.Button();
+            this.btnpaiement = new System.Windows.Forms.Button();
+            this.btnquittance = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlclients.SuspendLayout();
@@ -81,12 +88,13 @@ namespace gestiondedouanedevoiture
             this.panel8.SuspendLayout();
             this.panel5.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
+            this.pnl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 59);
+            this.label3.Location = new System.Drawing.Point(1051, 46);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(139, 23);
             this.label3.TabIndex = 1;
@@ -96,23 +104,11 @@ namespace gestiondedouanedevoiture
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(301, 0);
+            this.label4.Location = new System.Drawing.Point(745, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(744, 46);
             this.label4.TabIndex = 2;
             this.label4.Text = " GESTION DE DOUANE DE VOITURE";
-            // 
-            // btnmenu
-            // 
-            this.btnmenu.BackColor = System.Drawing.Color.Navy;
-            this.btnmenu.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnmenu.Location = new System.Drawing.Point(1221, 481);
-            this.btnmenu.Name = "btnmenu";
-            this.btnmenu.Size = new System.Drawing.Size(75, 43);
-            this.btnmenu.TabIndex = 2;
-            this.btnmenu.Text = "Menu";
-            this.btnmenu.UseVisualStyleBackColor = false;
-            this.btnmenu.Click += new System.EventHandler(this.btnmenu_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -123,16 +119,19 @@ namespace gestiondedouanedevoiture
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.panel1.Controls.Add(this.flowLayoutPanel1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 604);
+            this.panel1.Location = new System.Drawing.Point(529, 513);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1336, 109);
+            this.panel1.Size = new System.Drawing.Size(672, 75);
             this.panel1.TabIndex = 0;
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ControlDark;
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -152,7 +151,7 @@ namespace gestiondedouanedevoiture
             this.pnlclients.Location = new System.Drawing.Point(907, 15);
             this.pnlclients.Margin = new System.Windows.Forms.Padding(15);
             this.pnlclients.Name = "pnlclients";
-            this.pnlclients.Size = new System.Drawing.Size(371, 260);
+            this.pnlclients.Size = new System.Drawing.Size(371, 311);
             this.pnlclients.TabIndex = 5;
             // 
             // lblclients
@@ -173,7 +172,7 @@ namespace gestiondedouanedevoiture
             this.btndetailsclients.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btndetailsclients.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btndetailsclients.ForeColor = System.Drawing.Color.White;
-            this.btndetailsclients.Location = new System.Drawing.Point(277, 223);
+            this.btndetailsclients.Location = new System.Drawing.Point(277, 274);
             this.btndetailsclients.Name = "btndetailsclients";
             this.btndetailsclients.Size = new System.Drawing.Size(75, 23);
             this.btndetailsclients.TabIndex = 3;
@@ -246,7 +245,7 @@ namespace gestiondedouanedevoiture
             this.pnldeclarations.Location = new System.Drawing.Point(506, 15);
             this.pnldeclarations.Margin = new System.Windows.Forms.Padding(15);
             this.pnldeclarations.Name = "pnldeclarations";
-            this.pnldeclarations.Size = new System.Drawing.Size(371, 260);
+            this.pnldeclarations.Size = new System.Drawing.Size(371, 311);
             this.pnldeclarations.TabIndex = 4;
             // 
             // btndetailsdeclarations
@@ -254,7 +253,7 @@ namespace gestiondedouanedevoiture
             this.btndetailsdeclarations.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btndetailsdeclarations.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btndetailsdeclarations.ForeColor = System.Drawing.Color.White;
-            this.btndetailsdeclarations.Location = new System.Drawing.Point(267, 223);
+            this.btndetailsdeclarations.Location = new System.Drawing.Point(267, 274);
             this.btndetailsdeclarations.Name = "btndetailsdeclarations";
             this.btndetailsdeclarations.Size = new System.Drawing.Size(75, 23);
             this.btndetailsdeclarations.TabIndex = 2;
@@ -340,7 +339,7 @@ namespace gestiondedouanedevoiture
             this.pnlrecettes.Location = new System.Drawing.Point(115, 15);
             this.pnlrecettes.Margin = new System.Windows.Forms.Padding(15);
             this.pnlrecettes.Name = "pnlrecettes";
-            this.pnlrecettes.Size = new System.Drawing.Size(361, 260);
+            this.pnlrecettes.Size = new System.Drawing.Size(361, 311);
             this.pnlrecettes.TabIndex = 3;
             // 
             // btndetailsrecettes
@@ -348,7 +347,7 @@ namespace gestiondedouanedevoiture
             this.btndetailsrecettes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btndetailsrecettes.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btndetailsrecettes.ForeColor = System.Drawing.Color.White;
-            this.btndetailsrecettes.Location = new System.Drawing.Point(259, 223);
+            this.btndetailsrecettes.Location = new System.Drawing.Point(259, 274);
             this.btndetailsrecettes.Name = "btndetailsrecettes";
             this.btndetailsrecettes.Size = new System.Drawing.Size(75, 23);
             this.btndetailsrecettes.TabIndex = 1;
@@ -428,11 +427,118 @@ namespace gestiondedouanedevoiture
             this.flowLayoutPanel2.Controls.Add(this.pnlrecettes);
             this.flowLayoutPanel2.Controls.Add(this.pnldeclarations);
             this.flowLayoutPanel2.Controls.Add(this.pnlclients);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 178);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(559, 83);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(100, 0, 0, 0);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1336, 297);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1374, 341);
             this.flowLayoutPanel2.TabIndex = 3;
+            this.flowLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel2_Paint);
+            // 
+            // pnl1
+            // 
+            this.pnl1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.pnl1.Controls.Add(this.btnproprietaire);
+            this.pnl1.Controls.Add(this.btnvoiture);
+            this.pnl1.Controls.Add(this.btnpaiement);
+            this.pnl1.Controls.Add(this.btnquittance);
+            this.pnl1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnl1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.pnl1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pnl1.Location = new System.Drawing.Point(0, 77);
+            this.pnl1.Name = "pnl1";
+            this.pnl1.Size = new System.Drawing.Size(274, 636);
+            this.pnl1.TabIndex = 19;
+            this.pnl1.WrapContents = false;
+            // 
+            // btnproprietaire
+            // 
+            this.btnproprietaire.FlatAppearance.BorderSize = 0;
+            this.btnproprietaire.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnproprietaire.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnproprietaire.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnproprietaire.Font = new System.Drawing.Font("Impact", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnproprietaire.ForeColor = System.Drawing.Color.AliceBlue;
+            this.btnproprietaire.ImageIndex = 1;
+            this.btnproprietaire.ImageList = this.imageList1;
+            this.btnproprietaire.Location = new System.Drawing.Point(0, 1);
+            this.btnproprietaire.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            this.btnproprietaire.Name = "btnproprietaire";
+            this.btnproprietaire.Size = new System.Drawing.Size(280, 131);
+            this.btnproprietaire.TabIndex = 3;
+            this.btnproprietaire.Text = "PROPRIETAIRE";
+            this.btnproprietaire.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnproprietaire.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnproprietaire.UseVisualStyleBackColor = true;
+            // 
+            // btnvoiture
+            // 
+            this.btnvoiture.FlatAppearance.BorderSize = 0;
+            this.btnvoiture.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnvoiture.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnvoiture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnvoiture.Font = new System.Drawing.Font("Impact", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnvoiture.ForeColor = System.Drawing.Color.AliceBlue;
+            this.btnvoiture.ImageIndex = 0;
+            this.btnvoiture.ImageList = this.imageList1;
+            this.btnvoiture.Location = new System.Drawing.Point(0, 134);
+            this.btnvoiture.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            this.btnvoiture.Name = "btnvoiture";
+            this.btnvoiture.Size = new System.Drawing.Size(280, 131);
+            this.btnvoiture.TabIndex = 2;
+            this.btnvoiture.Text = "VOITURE";
+            this.btnvoiture.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnvoiture.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnvoiture.UseVisualStyleBackColor = true;
+            // 
+            // btnpaiement
+            // 
+            this.btnpaiement.FlatAppearance.BorderSize = 0;
+            this.btnpaiement.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnpaiement.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnpaiement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnpaiement.Font = new System.Drawing.Font("Impact", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnpaiement.ForeColor = System.Drawing.Color.AliceBlue;
+            this.btnpaiement.ImageIndex = 3;
+            this.btnpaiement.ImageList = this.imageList1;
+            this.btnpaiement.Location = new System.Drawing.Point(0, 267);
+            this.btnpaiement.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            this.btnpaiement.Name = "btnpaiement";
+            this.btnpaiement.Size = new System.Drawing.Size(280, 131);
+            this.btnpaiement.TabIndex = 5;
+            this.btnpaiement.Text = "TAXES ET PAIEMENT";
+            this.btnpaiement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnpaiement.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnpaiement.UseVisualStyleBackColor = true;
+            // 
+            // btnquittance
+            // 
+            this.btnquittance.FlatAppearance.BorderSize = 0;
+            this.btnquittance.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnquittance.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnquittance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnquittance.Font = new System.Drawing.Font("Impact", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnquittance.ForeColor = System.Drawing.Color.AliceBlue;
+            this.btnquittance.ImageIndex = 4;
+            this.btnquittance.ImageList = this.imageList1;
+            this.btnquittance.Location = new System.Drawing.Point(0, 400);
+            this.btnquittance.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            this.btnquittance.Name = "btnquittance";
+            this.btnquittance.Size = new System.Drawing.Size(280, 131);
+            this.btnquittance.TabIndex = 6;
+            this.btnquittance.Text = "GENERER QUITTANCE";
+            this.btnquittance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnquittance.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnquittance.UseVisualStyleBackColor = true;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "auto.png");
+            this.imageList1.Images.SetKeyName(1, "boutique-automobile.png");
+            this.imageList1.Images.SetKeyName(2, "declaration-dimpot.png");
+            this.imageList1.Images.SetKeyName(3, "paiement.png");
+            this.imageList1.Images.SetKeyName(4, "facture.png");
             // 
             // frmaccueil
             // 
@@ -440,9 +546,9 @@ namespace gestiondedouanedevoiture
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1336, 713);
+            this.Controls.Add(this.pnl1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.flowLayoutPanel2);
-            this.Controls.Add(this.btnmenu);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinimumSize = new System.Drawing.Size(900, 600);
@@ -466,6 +572,7 @@ namespace gestiondedouanedevoiture
             this.panel8.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
+            this.pnl1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -474,7 +581,6 @@ namespace gestiondedouanedevoiture
         #endregion
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnmenu;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
@@ -509,5 +615,11 @@ namespace gestiondedouanedevoiture
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.FlowLayoutPanel pnl1;
+        private System.Windows.Forms.Button btnproprietaire;
+        private System.Windows.Forms.Button btnvoiture;
+        private System.Windows.Forms.Button btnpaiement;
+        private System.Windows.Forms.Button btnquittance;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }

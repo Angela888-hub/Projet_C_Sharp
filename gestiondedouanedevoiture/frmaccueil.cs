@@ -54,5 +54,10 @@ namespace gestiondedouanedevoiture
             Form1 frm = new Form1();
             frm.Show();
         }
+
+        private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

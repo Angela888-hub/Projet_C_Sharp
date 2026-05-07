@@ -10,30 +10,31 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using gestiondedouanedevoiture.modeles;
 
-
 namespace gestiondedouanedevoiture
 {
     public partial class frmdeclarationvoiture : Form
     {
+        public frmdeclarationvoiture()
+        {
+            InitializeComponent();
+        }
+
         private void frmdeclarationvoiture_Load(object sender, EventArgs e)
         {
             ChargerProprietaires();
             ChargerDeclarations();
         }
+
+        // ====================== CHARGEMENT DES DONNÉES ======================
         private void ChargerProprietaires()
         {
             try
             {
-                string connectionString = "Server=localhost;User ID=root;Database=gestiondedouanedevoituredb;";
-
-                using (MySqlConnection conn = new MySqlConnection(connectionString))
+                using (MySqlConnection conn = new MySqlConnection("Server=localhost;User ID=root;Database=gestiondedouanedevoituredb;"))
                 {
                     conn.Open();
-
-                    string query = @"SELECT id_proprietaire, 
-                                   CONCAT(nom, ' ', prenoms) as nom_complet 
-                            FROM proprietaire 
-                            ORDER BY nom, prenoms";
+                    string query = @"SELECT id_proprietaire, CONCAT(nom, ' ', prenoms) as nom_complet 
+                                     FROM proprietaire ORDER BY nom, prenoms";
 
                     MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
                     DataTable dt = new DataTable();
@@ -47,10 +48,11 @@ namespace gestiondedouanedevoiture
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erreur chargement propriétaires :\n" + ex.Message,
-                                "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Erreur chargement propriétaires :\n" + ex.Message, "Erreur",
+                               MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private void ChargerDeclarations()
         {
             try
@@ -58,142 +60,117 @@ namespace gestiondedouanedevoiture
                 using (MySqlConnection conn = new MySqlConnection("Server=localhost;User ID=root;Database=gestiondedouanedevoituredb;"))
                 {
                     conn.Open();
-
                     string query = @"
-                SELECT 
-                    d.id_declaration,
-                    d.numero_repertoire,
-                    d.date_declaration,
-                    CONCAT(p.nom, ' ', p.prenoms) AS proprietaire,
-                    v.marque,
-                    v.modele,
-                    v.vin_numero_chassis,
-                    v.annee_fabrication,
-                    d.statut
-                FROM declaration d
-                JOIN proprietaire p ON d.id_proprietaire = p.id_proprietaire
-                JOIN voiture v ON d.vin_numero_chassis = v.vin_numero_chassis
-                ORDER BY d.date_declaration DESC";
+                        SELECT d.id_declaration, d.numero_repertoire, d.date_declaration,
+                               CONCAT(p.nom, ' ', p.prenoms) AS proprietaire,
+                               v.marque, v.modele, v.vin_numero_chassis, 
+                               v.annee_fabrication, d.statut
+                        FROM declaration d
+                        JOIN proprietaire p ON d.id_proprietaire = p.id_proprietaire
+                        JOIN voiture v ON d.vin_numero_chassis = v.vin_numero_chassis
+                        ORDER BY d.date_declaration DESC";
 
                     MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
-
-                    dgvDeclarations.DataSource = dt;   // ← Change si le nom est différent
+                    dgvDeclarations.DataSource = dt;
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erreur lors du chargement :\n" + ex.Message,
-                                "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Erreur lors du chargement :\n" + ex.Message, "Erreur",
+                               MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void dgvDeclarations_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = dgvDeclarations.Rows[e.RowIndex];
-                // On remplit tes TextBox avec les valeurs de la ligne sélectionnée
-                txtvin.Text = row.Cells["vin_numero_chassis"].Value.ToString();
-                txtmarque.Text = row.Cells["marque"].Value.ToString();
-                txtmodele.Text = row.Cells["modele"].Value.ToString();
-                txtannee.Text = row.Cells["annee de fabrication"].Value.ToString();
-                txtvaleur.Text = row.Cells["valeur d'achat"].Value.ToString();
-                comboModeproprietaire.Text = row.Cells["valeur d'achat"].Value.ToString();
-                txtvaleur.Text = row.Cells["valeur d'achat"].Value.ToString();
 
-                // ... etc
-            }
-        }
-        // ====================== BOUTON ENREGISTRER (à compléter) ======================
+        // ====================== BOUTON ENREGISTRER ======================
         private void btnEnregistrer_Click(object sender, EventArgs e)
         {
             try
             {
-                // A. On enregistre d'abord la déclaration pour obtenir son ID
-                // On récupère le numéro de répertoire et la date actuelle
-                int nouvelIdDecl = declaration_modeles.ajouter(txtnumero.Text, DateTime.Now);
-
-                if (nouvelIdDecl > 0)
+                if (string.IsNullOrWhiteSpace(txtvin.Text) ||
+                    string.IsNullOrWhiteSpace(txtmarque.Text) ||
+                    string.IsNullOrWhiteSpace(txtmodele.Text) ||
+                    string.IsNullOrWhiteSpace(txtannee.Text) ||
+                    string.IsNullOrWhiteSpace(txtvaleur.Text) ||
+                    string.IsNullOrWhiteSpace(txtnumero.Text) ||
+                    comboModeproprietaire.SelectedValue == null)
                 {
-                    // B. On récupère les autres infos de l'interface
-                    string vin = txtvin.Text;
-                    string marque = txtmarque.Text;
-                    string modele = txtmodele.Text;
-                    int annee = int.Parse(txtannee.Text); // Doit être un nombre
-                    string valeur = txtvaleur.Text;
-                    int idProp = int.Parse(comboModeproprietaire.SelectedValue.ToString());
+                    MessageBox.Show("Veuillez remplir tous les champs obligatoires !", "Attention",
+                                   MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
-                    // C. On appelle la méthode avec les 7 arguments demandés
-                    bool voitureOk = voiture_modeles.ajouter(vin, marque, modele, annee, valeur, idProp, nouvelIdDecl);
+                if (!int.TryParse(txtannee.Text, out int annee))
+                {
+                    MessageBox.Show("L'année de fabrication doit être un nombre valide.", "Erreur",
+                                   MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
-                    if (voitureOk)
+                int idNouvelleDeclaration = declaration_modeles.ajouter(txtnumero.Text.Trim(), DateTime.Now);
+
+                if (idNouvelleDeclaration > 0)
+                {
+                    bool voitureAjoutee = voiture_modeles.ajouter(
+                        txtvin.Text.Trim(), txtmarque.Text.Trim(), txtmodele.Text.Trim(),
+                        annee, txtvaleur.Text.Trim(),
+                        Convert.ToInt32(comboModeproprietaire.SelectedValue),
+                        idNouvelleDeclaration);
+
+                    if (voitureAjoutee)
                     {
-                        MessageBox.Show("La voiture et sa déclaration ont été enregistrées avec succès !");
+                        MessageBox.Show("Enregistrement réussi !", "Succès",
+                                       MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ChargerDeclarations();
+                        ViderChamps();
                     }
                     else
                     {
-                        MessageBox.Show("Erreur lors de l'enregistrement de la voiture.");
+                        MessageBox.Show("Erreur lors de l'enregistrement de la voiture.", "Erreur",
+                                       MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Erreur lors de la création de la déclaration.");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Vérifiez que tous les champs sont bien remplis : " + ex.Message);
+                MessageBox.Show("Une erreur est survenue :\n" + ex.Message, "Erreur",
+                               MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public frmdeclarationvoiture()
+
+        // ====================== MÉTHODE VIDER CHAMPS ======================
+        private void ViderChamps()
         {
-            InitializeComponent();
+            txtvin.Clear();
+            txtmarque.Clear();
+            txtmodele.Clear();
+            txtannee.Clear();
+            txtvaleur.Clear();
+            txtnumero.Clear();
+            comboModeproprietaire.SelectedIndex = -1;
+            txtvin.Focus();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        // ====================== AUTRES ÉVÉNEMENTS (tu peux les supprimer plus tard) ======================
+        private void dgvDeclarations_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            // À compléter plus tard
         }
 
-        private void lblvin_Click(object sender, EventArgs e)
+        private void btnsuivant_Click(object sender, EventArgs e) { }
+        private void btnsuivant_Click_1(object sender, EventArgs e) { }
+        private void btnenregistrer_Click_1(object sender, EventArgs e) { }
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void lbl1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void grpdeclaration_Enter(object sender, EventArgs e)
         {
-
-        }
-
-        private void txtmarque_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
